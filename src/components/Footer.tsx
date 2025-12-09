@@ -11,9 +11,9 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-                <span className="font-display font-bold text-navy text-xl">A</span>
+                <span className="font-display font-bold text-navy text-xl">L</span>
               </div>
-              <span className="font-display text-xl font-semibold text-gold">Agarwal & Co.</span>
+              <span className="font-display text-xl font-semibold text-gold">ListMySME<span className="text-gold/60">.com</span></span>
             </div>
             <p className="text-muted-foreground font-body max-w-md mb-4">
               Your trusted partner for SME IPO advisory services. We guide ambitious businesses 
@@ -64,7 +64,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gold/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Agarwal & Co. All rights reserved.
+            © {currentYear} ListMySME.com. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-gold transition-colors">Privacy Policy</a>

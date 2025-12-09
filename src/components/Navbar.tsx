@@ -20,10 +20,10 @@ const Navbar = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-              <span className="font-display font-bold text-navy text-xl">A</span>
+              <span className="font-display font-bold text-navy text-xl">L</span>
             </div>
             <span className="font-display text-xl font-semibold text-gold">
-              Agarwal & Co.
+              ListMySME<span className="text-gold/60">.com</span>
             </span>
           </a>
 
