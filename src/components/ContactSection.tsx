@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Office",
-    details: "Mumbai, Maharashtra",
-    subtext: "Financial District",
+    details: "New Delhi",
+    subtext: "Barakhamba Road",
   },
   {
     icon: Clock,
