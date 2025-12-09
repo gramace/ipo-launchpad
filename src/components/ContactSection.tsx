@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: "info@agarwalcs.com",
+    details: "info@listmysme.com",
     subtext: "We reply within 24 hours",
   },
   {
