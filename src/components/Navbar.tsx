@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -10,6 +11,7 @@ const Navbar = () => {
     { href: "#portfolio", label: "Portfolio" },
     { href: "#founder", label: "About" },
     { href: "#ipo-data", label: "IPO Data" },
+    { href: "/blog", label: "Blog", isRoute: true },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -30,13 +32,23 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-gold transition-colors duration-300 font-body text-sm"
-              >
-                {link.label}
-              </a>
+              link.isRoute ? (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-muted-foreground hover:text-gold transition-colors duration-300 font-body text-sm"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-muted-foreground hover:text-gold transition-colors duration-300 font-body text-sm"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
             <Button variant="hero" size="sm">
               Get Started
@@ -57,14 +69,25 @@ const Navbar = () => {
           <div className="md:hidden py-4 border-t border-gold/10 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-gold transition-colors duration-300 font-body"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
+                link.isRoute ? (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="text-muted-foreground hover:text-gold transition-colors duration-300 font-body"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-muted-foreground hover:text-gold transition-colors duration-300 font-body"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
               <Button variant="hero" size="sm" className="w-fit">
                 Get Started
